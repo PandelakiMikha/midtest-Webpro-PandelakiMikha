@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<title>MidTest</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fontawesome/css/all.css">
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-hardpurple">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#">Student Management App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
+</nav>
+<div class="container">
+  <h1 class="text-hardpurple">Student Management App</h1>
+  <h1>MiniApp</h1>
+</div>
+<hr class="container">
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+
+      <h2>Add Student</h2>
+
+      <button id="showHide" type="button" class="btn btn-primary bg-hardpurple">Show Form Add New Student</button>
+
+      <form style="display: none;">
+
+        <div class=" pt-4 mb-3">
+          <label for="InputStudentId" class="form-label">Student ID (NIM)</label>
+          <input type="text" class="form-control"  id="InputStudentId" placeholder="1050910320">
+        </div>
+
+        <div class="mb-3">
+          <label for="FullName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" placeholder="Jhon Doe" id="FullName">
+          <!-- <div id="inputProdSiAbbreviationhelp" class="form-text">Enter the Abbreviation form</div> -->
+        </div>
+
+        <div class="form-check">
+          <input value="Mele" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Mele
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input value="Femele" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+          <label class="form-check-label" for="flexRadioDefault2">
+            Femele
+          </label>
+        </div>
+
+        <div class="pt-4 mb-3">
+
+          <label for="FullName" class="form-label">Faculty</label>
+          <select class="form-select" aria-label="Default select example" id="Faculty">
+            <option selected>-- Select Faculty --</option>
+            <option value="PascaSarjanah">PascaSarjanah</option>
+            <option value="Fakultas Filfasat">Fakultas Filfasat</option>
+            <option value="Fakultas Keguruan dan Ilmu Pendidikan">Fakultas Keguruan dan Ilmu Pendidikan </option>
+            <option value="Fakultas Ekonomi dan Bisnis">Fakultas Ekonomi dan Bisnis</option>
+            <option value="Fakultas Pertanian">Fakultas Pertanian</option>
+            <option value="Fakultas Ilmu Komputer">Fakultas Ilmu Komputer</option>
+            <option value="Fakultas Keperawatan">Fakultas Keperawatan</option>
+            <option value="Akame Sekretari Manajemen Indonesia Kelabat">Akame Sekretari Manajemen Indonesia Kelabat</option>
+          </select>
+        </div>
+
+
+        <div class="pt-4 mb-3">
+
+          <label for="FullName" class="form-label">Program of Study </label>
+          <select class="form-select" aria-label="Default select example" id="Prodi">
+            <option selected>-- Select Program Study--</option>
+            <option value="PascaSarjanah">PascaSarjanah</option>
+            <option value="Prodi Filfasat">Prodi Filfasat</option>
+            <option value="Prodi Keguruan dan Ilmu Pendidikan">Prodi Keguruan dan Ilmu Pendidikan </option>
+            <option value="Prodi Ekonomi dan Bisnis">Prodi Ekonomi dan Bisnis</option>
+            <option value="Prodi Pertanian">Prodi Pertanian</option>
+            <option value="Prodi Sistem Informasi">Prodi Sistem Informasi</option>
+            <option value="Prodi Infomatika">Prodi Infomatika</option>
+            <option value="Prodi Sekretaris Management">Prodi Sekretaris Management</option>
+          </select>
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary bg-hardpurple " value="Add Student">Add Student</button>
+        </div>
+
+      </form>
+    </div>
+
+
+    <div class="col-6">
+
+      <h1>Filters Student By</h1>
+
+      <form>
+
+        <div class="container">
+
+
+          <div class="pt-4 mb-3">
+            <label for="InputFaculty" class="form-label">Faculty</label>
+            <select id="ListFaculty" class="form-select" aria-label="Default select example">
+              <option selected>-- Select Faculty --</option>
+              <option value="1">PascaSarjanah</option>
+              <option value="2">Fakultas Filfasat</option>
+              <option value="3">Fakultas Keguruan dan Ilmu Pendidikan </option>
+              <option value="4">Fakultas Ekonomi dan Bisnis</option>
+              <option value="5">Fakultas Pertanian</option>
+              <option value="6">Fakultas Ilmu Komputer</option>
+              <option value="5">Fakultas Keperawatan</option>
+              <option value="6">Akame Sekretari Manajemen Indonesia Kelabat</option>
+
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary bg-hardpurple">Show Student</button>
+
+
+          <div class="pt-4 mb-3">
+
+            <label for="FullName" class="form-label">Program of Study </label>
+            <select id="ListProdi" class="form-select" aria-label="Default select example">
+             <option selected>-- Select Program Study--</option>
+            <option value="1">PascaSarjanah</option>
+            <option value="2">Prodi Filfasat</option>
+            <option value="3">Prodi Keguruan dan Ilmu Pendidikan </option>
+            <option value="4">Prodi Ekonomi dan Bisnis</option>
+            <option value="5">Prodi Pertanian</option>
+            <option value="5">Prodi Sistem Informasi</option>
+            <option value="5">Prodi Infomatika</option>
+            <option value="5">Prodi Sekretaris Management</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary bg-hardpurple">Show Student</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container mt-3">
+    <h1>Our Student</h1>
+
+    <div class="row pt-4">
+      <input type="text" class="form-control form-control-sm fs-6 fw-light" id="search" placeholder="Search student by nim...">
+      <!-- <input type="search" value="Search Student by Name" aria-label> -->
+
+    </div>
+
+    <div class="row pt-4 mt-4  ">
+      <table class=" table table-striped" id="OurStudent">
+        <tr>
+          <td>Student Id</td>
+          <td>Full Name</td>
+          <td>Gender</td>
+          <td>Faculty</td>
+          <td>Program of Study</td>
+          <td>Action</td>
+        </tr>
+        <tr>
+          <td>105011810001</td>
+          <td>jhon Doe</td>
+          <td>Male</td>
+          <td>fik</td>
+          <td>Sitem Informasi</td>
+          <td><a href="#" class="link-danger"><i class="bi bi-person-dash-fill"></i></a></td>
+
+        </tr>
+        <tr>
+          <td>103021810001</td>
+          <td>Jack Racher</td>
+          <td>Male</td>
+          <td>Feb</td>
+          <td>Manajemen</td>
+          <td><a href="#" class="link-danger"><i class="bi bi-person-dash-fill"></i></a></td>
+        </tr>
+        <tr>
+          <td>105021810002</td>
+          <td>Merry Heather</td>
+          <td>Female</td>
+          <td>Fik</td>
+          <td>Informati</td>
+          <td><a href="#" class="link-danger"><i class="bi bi-person-dash-fill"></i></a></td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+
+
+<footer class="bg-hardpurple text-center footer" style="width: 100%; bottom: 0px; height: 50px;  color: aliceblue;" >
+
+   <i class="fab fa-js"></i>
+   <i class="fab fa-bootstrap"></i>
+   <i class="fab fa-css3-alt"></i><br>
+    <H5 >Creadit by Mikha  &copy; 2021</H5>
+   
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+  crossorigin="anonymous"></script>
+
+  
+
+<script src="function.js"></script>
+</body>
+</html>
